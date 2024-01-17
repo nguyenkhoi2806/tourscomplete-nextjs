@@ -15,13 +15,13 @@
     "analyze": "ANALYZE=true next build",
     "eslint": "next lint --fix --dir src",
     "prettier": "prettier --write .",
-    "lint": "yarn eslint && yarn prettier",
+    "lint": "pnpm eslint && pnpm prettier",
     "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",
-    "postbuild": "next-sitemap && yarn prisma generate",
-    "postinstall": "yarn prisma generate"
+    "postbuild": "next-sitemap && pnpm prisma generate",
+    "postinstall": "pnpm prisma generate"
   },
   "lint-staged": {
-    "*.{js,jsx,md,ts,tsx,html,css,scss}": "yarn prettier",
+    "*.{js,jsx,md,ts,tsx,html,css,scss}": "pnpm prettier",
     "*.{js,jsx,ts,tsx}": "eslint --cache --fix --cache-location ./node_modules/.cache/.eslintcache"
   },
   "dependencies": {
