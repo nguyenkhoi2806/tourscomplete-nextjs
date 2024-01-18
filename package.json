@@ -18,7 +18,8 @@
     "lint": "pnpm eslint && pnpm prettier",
     "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",
     "postbuild": "next-sitemap && pnpm prisma generate",
-    "postinstall": "pnpm prisma generate"
+    "postinstall": "pnpm prisma generate",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,jsx,md,ts,tsx,html,css,scss}": "pnpm prettier",
