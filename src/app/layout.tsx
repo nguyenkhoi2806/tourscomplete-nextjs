@@ -21,11 +21,7 @@ const inter = Inter({
 export default async function RootLayout({ children }: ChildrenProps) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} h-full flex flex-col justify-between`}
-      >
-        <section className="flex-1">{children}</section>
-      </body>
+      <body className={`${inter.className} h-full `}>{children}</body>
     </html>
   );
 }
