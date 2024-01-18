@@ -2,13 +2,11 @@
 
 import { useEffect } from 'react';
 
-import EmptyState from '@/components/empty-state/index';
+import EmptyState from '@/components/empty-state';
 
-interface UnauthorizeStateProps {
-  error: Error;
-}
+const Unauthorized = (props: any) => {
+  const { error } = props;
 
-const UnauthorizeState: React.FC<UnauthorizeStateProps> = ({ error }) => {
   useEffect(() => {
     // eslint-disable-next-line no-console
     console.error(error);
@@ -24,4 +22,4 @@ const UnauthorizeState: React.FC<UnauthorizeStateProps> = ({ error }) => {
   );
 };
 
-export default UnauthorizeState;
+export default Unauthorized;
