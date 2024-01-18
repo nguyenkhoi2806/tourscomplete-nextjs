@@ -2,7 +2,7 @@
 
 import type { IconType } from 'react-icons';
 
-interface ButtonProps {
+type ButtonProps = {
   label: string;
   // eslint-disable-next-line no-unused-vars
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
@@ -11,7 +11,7 @@ interface ButtonProps {
   small?: boolean;
   icon?: IconType;
   isLoading?: boolean;
-}
+};
 
 const Button: React.FC<ButtonProps> = ({
   label,

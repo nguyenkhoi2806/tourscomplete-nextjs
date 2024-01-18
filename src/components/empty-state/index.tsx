@@ -5,13 +5,13 @@ import { useRouter } from 'next/navigation';
 import Button from './button';
 import Heading from './heading';
 
-interface EmptyStateProps {
+type EmptyStateProps = {
   title?: string;
   subtitle?: string;
   showReset?: boolean;
   label?: string;
   reset?: () => void;
-}
+};
 
 const EmptyState: React.FC<EmptyStateProps> = ({
   title = 'No exact matches',
